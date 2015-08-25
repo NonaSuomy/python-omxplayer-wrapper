@@ -42,6 +42,12 @@ class OMXPlayer(object):
 
     Args:
         filename (str): Path to the file you wish to play
+        args (list): used to pass options to omxplayer, e.g.
+        args=["--no-osd"] is equivalent to the command line:
+        omxplayer --no-osd
+        multiple argument example: 
+        OMXPlayer('path.mp4', args=['--no-osd', '--no-keys', '-b'])
+        info: https://github.com/popcornmix/omxplayer#synopsis
     """
     def __init__(self, filename,
                  args=[],
